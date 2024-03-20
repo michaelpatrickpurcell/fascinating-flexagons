@@ -1,0 +1,41 @@
+\documentclass{standalone}
+\usepackage{tikz}
+
+\tikzset{every node/.style={minimum width=1in, minimum height=1in, inner sep=0pt}}
+
+\tikzset{flexagon/.pic={
+\node at (-0in, 0in) {$2$};
+\node at (-1in, 0in) {$2$};
+\node at (-1in, 1in) {$4$};
+\node at (-2in, 1in) {$10$};
+\node at (-2in, 2in) {$12$};
+\node at (-3in, 2in) {$12$};
+\node at (-3in, 3in) {$8$};
+\node at (-4in, 3in) {$8$};
+\node at (-4in, 4in) {$10$};
+\node at (-5in, 4in) {$4$};
+\node at (-5in, 5in) {$6$};
+\node at (-6in, 5in) {$6$};
+\node at (-6in, 6in) {$2$};
+%\node at (-7in, 6in) {$2$};
+%\node at (-7in, 7in) {$4$};
+%\node at (-8in, 7in) {$10$};
+%\node at (-8in, 8in) {$12$};
+%\node at (-9in, 8in) {$12$};
+%\node at (-9in, 9in) {$8$};
+%\node at (-10in, 9in) {$8$};
+%\node at (-10in, 10in) {$10$};
+%\node at (-11in, 10in) {$4$};
+%\node at (-11in, 11in) {$6$};
+%\node at (-12in, 11in) {$6$};
+%\node at (-12in, 12in) {$2$};
+}}
+
+\begin{document}
+\Huge
+\begin{tikzpicture}
+\pic[rotate=-45, transform shape] at (-2in,0) {flexagon}; 
+\pic[rotate=-45, transform shape] at (2in,0) {flexagon}; 
+
+\end{tikzpicture}
+\end{document}

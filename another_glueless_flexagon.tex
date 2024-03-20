@@ -1,0 +1,28 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+
+\tikzset{every node/.style={draw, minimum width=2in, minimum height=2in, inner sep=0pt}}
+
+\begin{document}
+\begin{tikzpicture}
+\Huge
+\node at (0,0) {$1_2$};
+\node at (2in, 0) {$4_2$};
+\node at (4in, 0) {$5_3$};
+
+\node at (0, 2in) {$1_3$};
+\node at (4in, 2in) {$6_4$};
+\node at (6in, 2in) {$6_5$};
+
+\node at (0, 4in) {$6_5$};
+\node at (2in, 4in) {$6_4$};
+\node at (6in, 4in) {$1_3$};
+
+\node at (2in, 6in) {$5_3$};
+\node at (4in, 6in) {$4_2$};
+\node at (6in, 6in) {$1_2$};
+
+
+\end{tikzpicture}
+\end{document}

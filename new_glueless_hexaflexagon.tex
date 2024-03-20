@@ -1,0 +1,41 @@
+\documentclass{standalone}
+
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+\usetikzlibrary{calc}
+
+%\newlength{\radius}
+%\setlength{\radius}{1.7320508075688772}
+
+\tikzset{every node/.style={draw, inner sep=0pt}}
+
+\tikzset{lattice/.pic={
+    \foreach \row in {0, 1, ...,6} {
+        \draw ($\row*(0.5, {0.5*sqrt(3)})$) -- ($(\rows,0)+\row*(-0.5, {0.5*sqrt(3)})$);
+    }
+    
+    \foreach \row in {0,1, ...,6} {
+        \draw ($\row*(1, 0)$) -- ($(\rows/2,{\rows/2*sqrt(3)})+\row*(0.5,{-0.5*sqrt(3)})$);
+    }
+
+    \foreach \row in {3,4, ...,9} {
+        \draw ($\row*(1, 0)$) -- ($(0,0)+\row*(0.5,{0.5*sqrt(3)})$);
+    }
+}}
+
+\begin{document}
+
+
+
+\newcommand*\rows{9}
+\begin{tikzpicture}
+
+\clip (0:3) -- (60:3) -- (120:3) -- (180:3) -- (240:3) -- (300:3) -- cycle;
+
+\pic at (-4.5,-2.598076211353316) {lattice};
+%\node[fill=black, circle, inner sep=2pt] at (0,0) {};
+    
+\end{tikzpicture}
+
+
+\end{document}

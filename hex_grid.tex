@@ -1,0 +1,29 @@
+\documentclass{standalone}
+\usepackage{tikz}
+\usetikzlibrary{shapes.geometric}
+
+\tikzset{every node/.style = {draw, regular polygon, regular polygon sides=6, minimum width=2in, inner sep=0pt, rotate=30}}
+
+\newlength{\offset}
+\setlength{\offset}{1.7320508075688772in}
+
+\begin{document}
+\begin{tikzpicture}
+\foreach \i in {0}%,1,2,3}
+	\node at (\i\offset,0) {};
+	
+\foreach \i in {-0.5,0.5}%,1.5,2.5,3.5}
+	\node at (\i\offset,1.5in) {};
+
+\foreach \i in {-1,0,1}%,2,3,4}
+	\node at (\i\offset,3in) {};
+
+\foreach \i in {-1.5,-0.5,0.5,1.5}%,2.5,3.5,4.5}
+	\node at (\i\offset,4.5in) {};
+
+
+\foreach \i in {-2,-1,0,1,2}%,3,4,5}
+	\node at (\i\offset,6in) {};
+
+\end{tikzpicture}
+\end{document}
